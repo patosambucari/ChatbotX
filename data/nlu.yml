@@ -3,51 +3,59 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - hola
+    - buen dia
+    - alo
+    - buenas
+    - como va
+    - buenas tardes
+    - buenos dias
+    - como andan
+    - como estas
+    - como andas
+    - como te va
+    - buenas noches
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - chau
+    - adios
+    - nos vemos
+    - hablamos
+    - gracias a ustedes
+    - buen fin de semana
+    - buenas ventas
+
+- intent: payment_methods
+  examples: |
+    - formas de pago
+    - metodos de pago
+    - como podemos pagar
+    - como puedo pagar
+    - medios de pago
+    - cuentas bancarias
+    - cbu
+    - alias
+    - datos de mercado pago
+    - datos de cuenta
+    - efectivo
 
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - si
+    - dale
+    - ok
+    - bueno
+    - suena bien
+    - correcto
+    - sisi
 
 - intent: deny
   examples: |
     - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - nono
+    - suspendelo
+    - cancelalo
 
 - intent: mood_great
   examples: |
@@ -79,7 +87,7 @@ nlu:
     - unhappy
     - not good
     - not very good
-    - extremly sad
+    - extremely sad
     - so saad
     - so sad
 
@@ -89,3 +97,5 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+constrain_similarities: true

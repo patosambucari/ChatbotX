@@ -2,12 +2,22 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Saludar para recibir al cliente
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Despedirse cuando el cliente saluda
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Responder que es un bot
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Enviar medios de pago
+  steps:
+  - intent: payment_methods
+  - action: utter_payment_methods

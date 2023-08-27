@@ -3,6 +3,8 @@ version: "3.1"
 intents:
   - greet
   - goodbye
+  - order
+  - payment_methods
   - affirm
   - deny
   - mood_great
@@ -11,23 +13,32 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "¡Hola! ¿Como estas?"
+  - text: "¿Qué tal estás?"
+  - text: "¿Cómo estás hoy?"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "¡Que te mejores!"
+  - text: "¡Ya va a mejorar todo!"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "¿Te sirvió mi ayuda?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "¡Me alegro!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Hasta la próxima. ¡Muchas gracias!"
+  - text: "¡A tu disposición por cualquier consulta! Muchas gracias."
+  - text: "¡Seguimos en contacto! Muchas gracias."
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Soy un bot al servicio de Imagine One"
+  - text: "¡Soy un bot! Pero estoy muy bien entrenado =)"
+
+  utter_payment_methods:
+  - text: "Te envío a continuación los medios de pago disponibles."
+    image: "https://www.imagineone.com.ar/botAssets/payment_methods.png"
 
 session_config:
   session_expiration_time: 60
