@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Imagine One</title>
+        <link type="text/css" rel="stylesheet" href="css/styles.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.gif" />
+    <body>
+        <img src="images/offline-new.png" alt="En Mantenimiento" class="center">
+        <style>
+
+        </style>
+        <script>!(function () {
+        let e = document.createElement("script"),
+            t = document.head || document.getElementsByTagName("head")[0];
+        (e.src =
+            "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+            (e.async = !0),
+            (e.onload = () => {
+                window.WebChat.default(
+                    {
+                        initPayload: '/greet',
+                        customData: { language: "en" },
+                        socketUrl: "http://localhost:5005",
+                        title: 'Imagine One',
+                        subtitle: 'Introducir consulta',
+                        storage: 'session'
+                    },
+                    null
+                );
+            }),
+            t.insertBefore(e, t.firstChild);
+            })();
+        </script>
+    </body>
+</html>

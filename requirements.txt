@@ -5,3 +5,9 @@ nlp = spacy.load("es_core_news_md")
 
 rasa init --no-prompt
 
+rasa train
+
+
+PERMISSION ERRORS
+to delete the Rasa cache: “.rasa/cache”
+to delete the content of the directory “C:\Users\xxxxxx\AppData\Local\Temp\tmpxxxxx”
