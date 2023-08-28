@@ -1,6 +1,7 @@
 version: "3.1"
 
 intents:
+  - start
   - greet
   - goodbye
   - order
@@ -26,6 +27,8 @@ responses:
 
   utter_happy:
   - text: "¡Me alegro!"
+  - text: "¡Que bueno! Por aquí todo bien, también."
+  - text: "Mejor así."
 
   utter_goodbye:
   - text: "Hasta la próxima. ¡Muchas gracias!"
@@ -39,6 +42,9 @@ responses:
   utter_payment_methods:
   - text: "Te envío a continuación los medios de pago disponibles."
     image: "https://www.imagineone.com.ar/botAssets/payment_methods.png"
+
+  utter_start:
+  - text: "¡Hola! Bienvenido a Imagine One. ¿En qué puedo ayudarte?"
 
 session_config:
   session_expiration_time: 60

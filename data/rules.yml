@@ -2,10 +2,20 @@ version: "3.1"
 
 rules:
 
-- rule: Saludar para recibir al cliente
+- rule: Mensaje de bienvenida
+  steps:
+  - intent: start
+  - action: utter_start
+
+- rule: Saludar al cliente
   steps:
   - intent: greet
   - action: utter_greet
+
+- rule: Responder que todo esta bien
+  steps:
+  - intent: mood_great
+  - action: utter_happy
 
 - rule: Despedirse cuando el cliente saluda
   steps:

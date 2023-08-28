@@ -8,7 +8,15 @@
     <body>
         <img src="images/offline-new.png" alt="En Mantenimiento" class="center">
         <style>
-
+            .rw-conversation-container .rw-header{background-color: #fafafa; font-family: "Avant Garde Book BT",serif;); color: #515151; font-size: 11px;}
+            .rw-conversation-container .rw-header .rw-title{font-family: "Avant Garde Book BT",serif;); color: #515151; font-size: 16px;}
+            .rw-conversation-container .rw-messages-container{background-color: #f0f0f0}
+            .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: #c8c8c8; font-family: "Avant Garde Demi BT", serif; color: black; font-size: 13px}
+            .rw-conversation-container .rw-messages-container .rw-message .rw-response{background-color: #009045; font-family: "Avant Garde Demi BT", serif; color: #fafafa; font-size: 13px}
+            .rw-launcher{background-color: #009045;}
+            .rw-conversation-container .rw-reply{background-color: hsl(57, 69%, 61%); border: 1px solid hsl(123, 69%, 61%);}
+            .rw-conversation-container .rw-sender{font-family: "Avant Garde Book BT",serif; font-size: 13px;)}
+            .rw-conversation-container .rw-send{border-color: #009045}
         </style>
         <script>!(function () {
         let e = document.createElement("script"),
@@ -20,12 +28,18 @@
             (e.onload = () => {
                 window.WebChat.default(
                     {
-                        initPayload: '/greet',
+                        initPayload: '/start',
                         customData: { language: "en" },
                         socketUrl: "http://localhost:5005",
                         title: 'Imagine One',
                         subtitle: '🟢 Disponible',
-                        storage: 'session'
+                        storage: 'session',
+                        profileAvatar: "./images/logoi1.png",
+                        openLauncherImage: "./images/abrirChat.png",
+                        closeImage: "./images/cerrarChat.png",
+                        inputTextFieldHint: "Escribe un mensaje...",
+                        connectingText: "Intentando conectar...",
+                        hideWhenNotConnected: false
                     },
                     null
                 );

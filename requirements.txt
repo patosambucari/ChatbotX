@@ -14,13 +14,14 @@ PERMISSION ERRORS
 to delete the Rasa cache: “.rasa/cache”
 to delete the content of the directory “C:\Users\xxxxxx\AppData\Local\Temp\tmpxxxxx”
 
+
+INFO
 https://planetachatbot.com/construyendo-un-chatbot-en-espanol-usando-rasa-moodbot/
 
 https://github.com/botfront/rasa-webchat#session-persistence
 
-
-responses:
-  utter_greet:
-  - text: "¡Hola! ¿Como estas?"
-  - text: "¿Qué tal estás?"
-  - text: "¿Cómo estás hoy?"
+VIDEOS
+Chatbot de React con RASA: https://www.youtube.com/watch?v=eJMT2FovZsM
+Chatbot desde 0 con Rasa X: https://www.youtube.com/watch?v=GwaSJUlB8oA&list=PLtFHvora00y8NBwCMoNnPqii-y2-gyl5p&index=2
+Customizar Rasa Webchat: https://www.youtube.com/watch?v=n4XTy8M7zlU
+Integrar RASA con Telegram: https://www.youtube.com/watch?v=QuyWEbKMzcA
