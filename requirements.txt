@@ -7,7 +7,7 @@ rasa init --no-prompt
 
 rasa train
 
-rasa run -m models --enable-api --cors "*" --> Correr Modelo (¿Que es CORS?
+rasa run -m models --enable-api --cors "*" 		--> Correr Modelo (¿Que es CORS?
 
 
 PERMISSION ERRORS
@@ -17,3 +17,10 @@ to delete the content of the directory “C:\Users\xxxxxx\AppData\Local\Temp\tmp
 https://planetachatbot.com/construyendo-un-chatbot-en-espanol-usando-rasa-moodbot/
 
 https://github.com/botfront/rasa-webchat#session-persistence
+
+
+responses:
+  utter_greet:
+  - text: "¡Hola! ¿Como estas?"
+  - text: "¿Qué tal estás?"
+  - text: "¿Cómo estás hoy?"
