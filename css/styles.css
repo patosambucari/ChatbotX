@@ -27,3 +27,60 @@
     font-weight: normal;
     src: local('Avant Garde Demi Oblique BT'), url('AVGARDDO_2.woff') format('woff');
     }
+
+    .rw-conversation-container .rw-header .rw-title {
+        font-family: "Avant Garde Book BT",serif;
+        color: #515151;
+        font-size: 16px;
+    }
+
+    .rw-conversation-container .rw-header {
+        background-color: #f8f8f8 !important;
+        font-family: "Avant Garde Book BT",serif;
+        color: #515151 !important;
+        font-size: 11px;
+    }
+
+    .rw-conversation-container .rw-messages-container {
+        background-color: #f0f0f0;
+    }
+
+    .rw-conversation-container .rw-messages-container .rw-message .rw-client {
+        background-color: #c8c8c8;
+        font-family: "Avant Garde Demi BT", serif;
+        color: black;
+        font-size: 13px;
+    }
+
+    .rw-conversation-container .rw-messages-container .rw-message .rw-response {
+        background-color: #009045;
+        font-family: "Avant Garde Demi BT", serif;
+        color: #fafafa;
+        font-size: 13px;
+    }
+
+    .rw-launcher {
+        background-color: #009045 !important;
+    }
+
+    .rw-conversation-container .rw-sender {
+        background-color: #f8f8f8 !important;
+        font-family: "Avant Garde Book BT",serif;
+        font-size: 13px;
+        height: 60px;
+        position: relative;
+        background-image: url("../images/footer.png")
+    }
+
+    .rw-conversation-container .rw-sender .rw-new-message {
+        transform: translateY(-20px);
+    }
+
+    .rw-conversation-container .rw-sender .rw-send {
+        transform: translateY(-20px);
+    }
+
+
+    .rw-conversation-container .rw-sender .rw-send .rw-send-icon-ready {
+        fill: grey;
+    }

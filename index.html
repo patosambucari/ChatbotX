@@ -1,52 +1,18 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Imagine One</title>
         <link type="text/css" rel="stylesheet" href="css/styles.css">
         <link rel="icon" type="image/x-icon" href="images/favicon.gif" />
+    </head>
     <body>
         <img src="images/offline-new.png" alt="En Mantenimiento" class="center">
-        <style>
-            .rw-conversation-container .rw-header{background-color: #fafafa; font-family: "Avant Garde Book BT",serif;); color: #515151; font-size: 11px;}
-            .rw-conversation-container .rw-header .rw-title{font-family: "Avant Garde Book BT",serif;); color: #515151; font-size: 16px;}
-            .rw-conversation-container .rw-messages-container{background-color: #f0f0f0}
-            .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: #c8c8c8; font-family: "Avant Garde Demi BT", serif; color: black; font-size: 13px}
-            .rw-conversation-container .rw-messages-container .rw-message .rw-response{background-color: #009045; font-family: "Avant Garde Demi BT", serif; color: #fafafa; font-size: 13px}
-            .rw-launcher{background-color: #009045;}
-            .rw-conversation-container .rw-reply{background-color: hsl(57, 69%, 61%); border: 1px solid hsl(123, 69%, 61%);}
-            .rw-conversation-container .rw-sender{font-family: "Avant Garde Book BT",serif; font-size: 13px;)}
-            .rw-conversation-container .rw-send{border-color: #009045}
-            .rw-conversation-container .rw-sender .rw-send .rw-send-icon-ready{fill: grey}
-        </style>
-        <script>!(function () {
-        let e = document.createElement("script"),
-            t = document.head || document.getElementsByTagName("head")[0];
-        localStorage.clear(); //Borrar Historial
-        (e.src =
-            "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
-            (e.async = !0),
-            (e.onload = () => {
-                window.WebChat.default(
-                    {
-                        initPayload: '/start',
-                        customData: { language: "en" },
-                        socketUrl: "http://localhost:5005",
-                        title: 'Imagine One',
-                        subtitle: '🟢 Disponible',
-                        storage: 'session',
-                        profileAvatar: "./images/logoi1.png",
-                        openLauncherImage: "./images/abrirChat.png",
-                        closeImage: "./images/cerrarChat.png",
-                        inputTextFieldHint: "Escribe un mensaje...",
-                        connectingText: "Intentando conectar...",
-                        hideWhenNotConnected: false
-                    },
-                    null
-                );
-            }),
-            t.insertBefore(e, t.firstChild);
-            })();
+
+        <script type="module">
+            import webchatScript from '/scripts/webchat-script.js';
+            webchatScript();
         </script>
+
     </body>
 </html>
