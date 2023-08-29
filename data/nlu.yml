@@ -1,8 +1,6 @@
 version: "3.1"
 
 nlu:
-- intent: start
-
 - intent: greet
   examples: |
     - hola
@@ -27,6 +25,11 @@ nlu:
     - gracias a ustedes
     - buen fin de semana
     - buenas ventas
+
+- intent: start
+  examples: |
+    - empezamos
+    - comenzamos
 
 - intent: payment_methods
   examples: |
@@ -101,6 +104,8 @@ nlu:
 - intent: mood_unhappy
   examples: |
     - Todo mal
+    - Horrible
+    - Para atras
 
 - intent: bot_challenge
   examples: |
@@ -114,8 +119,25 @@ nlu:
   examples: |
     - gracias
     - muchas gracias
-    - excelente
     - te agradezco
     - agradecido
+
+- intent: solicitar_precio
+  examples: |
+    - precio
+    - presupuesto
+
+- intent: informar_numero_cuenta
+  examples: |
+    - te paso mi numero de cliente
+    - soy el cliente numero
+    - mi numero de cliente es
+    - numero de cliente
+    - cliente numero
+
+regex:
+  nro_cta_cliente: '5\d{4}'
+  mail_cliente: '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+
 
 constrain_similarities: true

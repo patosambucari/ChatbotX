@@ -24,6 +24,7 @@ policies:
   - name: MemoizationPolicy
   - name: RulePolicy
   - name: TEDPolicy
+    constrain_similarities: true
     max_history: 5
     epochs: 100
 

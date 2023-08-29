@@ -29,12 +29,17 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: No se entiende la consulta
-  steps:
-  - intent: unclear_input
-  - action: action_default_fallback
+#- story: No se entiende la consulta
+#  steps:
+#  - intent: unclear_input
+#  - action: action_default_fallback
 
-- story: hacer pago
+- story: Brindar precio con cliente validado
+  steps:
+  - intent: solicitar_precio
+  - action: ActionBrindarPrecio
+
+- story: Consultar pago
   steps:
   - intent: payment_methods
   - action: utter_payment_methods
@@ -44,3 +49,39 @@ stories:
   - action: utter_mercadopago
   - intent: efectivo
   - action: utter_efectivo
+
+- story: Solicitar y validar número de cuenta
+  steps:
+  - intent: informar_numero_cuenta
+    user: |-
+      Mi número de cuenta es 54123
+  - action: ActionValidarNroCta
+  - slot_was_set:
+    - nro_cta_cliente: "54123"
+
+  - intent: informar_numero_cuenta
+    user: |-
+      Mi número de cuenta es 12345
+  - action: ActionValidarNroCta
+  - action: ActionSolicitarNroCta
+
+  - intent: informar_numero_cuenta
+    user: |-
+      Mi número de cuenta es 55555
+  - action: ActionValidarNroCta
+  - slot_was_set:
+    - nro_cta_cliente: "55555"
+
+  - intent: informar_numero_cuenta
+    user: |-
+      Mi número de cuenta es 123
+  - action: ActionValidarNroCta
+  - action: ActionSolicitarNroCta
+
+  - intent: informar_numero_cuenta
+    user: |-
+      Mi número de cuenta es 123456
+  - action: ActionValidarNroCta
+  - action: ActionSolicitarNroCta
+
+

@@ -1,10 +1,9 @@
 version: "3.1"
 
 intents:
-  - start
   - greet
   - goodbye
-  - order
+  - start
   - payment_methods
   - bancos
   - mercadopago
@@ -15,6 +14,57 @@ intents:
   - mood_unhappy
   - bot_challenge
   - agradecimiento
+  - solicitar_precio
+  - informar_numero_cuenta
+
+entities:
+  - marca_lente
+  - nombre_cliente
+  - nro_cta_cliente
+  - mail_cliente
+  - cuit_cliente
+
+regex:
+  - nro_cta_cliente
+  - mail_cliente
+
+actions:
+  - ActionValidarNroCta
+  - ActionSolicitarNroCta
+  - ActionBrindarPrecio
+#  - ActionDefaultFallback
+
+slots:
+  marca_lente:
+    type: text
+    initial_value: null
+    mappings:
+      - type: custom
+  nombre_cliente:
+    type: text
+    initial_value: null
+    mappings:
+      - type: custom
+  nro_cta_cliente:
+      type: text
+      initial_value: null
+      mappings:
+        - type: custom
+  mail_cliente:
+      type: text
+      initial_value: null
+      mappings:
+        - type: custom
+  cuit_cliente:
+      type: text
+      initial_value: null
+      mappings:
+        - type: custom
+  cliente_validado:
+      type: bool
+      initial_value: false
+      mappings:
+        - type: custom
 
 responses:
   utter_greet:
@@ -81,11 +131,6 @@ responses:
   utter_agradecimiento:
   - text: "¡Gracias a vos!"
   - text: "¡Muchas gracias a vos!"
-
-actions:
-  - action_default_fallback
-
-
 
 session_config:
   session_expiration_time: 60
