@@ -28,3 +28,19 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: No se entiende la consulta
+  steps:
+  - intent: unclear_input
+  - action: action_default_fallback
+
+- story: hacer pago
+  steps:
+  - intent: payment_methods
+  - action: utter_payment_methods
+  - intent: bancos
+  - action: utter_bancos
+  - intent: mercadopago
+  - action: utter_mercadopago
+  - intent: efectivo
+  - action: utter_efectivo

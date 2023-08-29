@@ -31,3 +31,23 @@ rules:
   steps:
   - intent: payment_methods
   - action: utter_payment_methods
+
+- rule: Enviar datos de bancos
+  steps:
+  - intent: bancos
+  - action: utter_bancos
+
+- rule: Enviar datos de Mercado Pago
+  steps:
+  - intent: mercadopago
+  - action: utter_mercadopago
+
+- rule: Pago en efectivo
+  steps:
+  - intent: efectivo
+  - action: utter_efectivo
+
+#- rule: No se entiende la consulta
+#  steps:
+#  - intent: nlu_fallback
+#  - action: utter_fallback

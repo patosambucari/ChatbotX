@@ -6,6 +6,9 @@ intents:
   - goodbye
   - order
   - payment_methods
+  - bancos
+  - mercadopago
+  - efectivo
   - affirm
   - deny
   - mood_great
@@ -40,11 +43,44 @@ responses:
   - text: "¡Soy un bot! Pero estoy muy bien entrenado =)"
 
   utter_payment_methods:
-  - text: "Te envío a continuación los medios de pago disponibles."
-    image: "https://www.imagineone.com.ar/botAssets/payment_methods.png"
+  - text: "Podes abonar por transferencia o depósito bancario, Mercado Pago o efectivo. ¿Qué medio preferis?"
+  - text: "Recibimos pagos a través de bancos, Mercado Pago, o en efectivo. ¿Cómo te queda mejor?"
+  - text: "¿Cómo preferis hacer el pago? Puede ser por banco, Mercado pago o en efectivo."
+
+  utter_bancos:
+  - text: "Te envío a continuación nuestros datos bancarios:"
+    image: "https://www.imagineone.com.ar/botAssets/bancos.png"
+  - text: "¡Perfecto! Te paso los datos de nuestras cuentas:"
+    image: "https://www.imagineone.com.ar/botAssets/bancos.png"
+  - text: "Bárbaro, estos son los datos de nuestras cuentas bancarias:"
+    image: "https://www.imagineone.com.ar/botAssets/bancos.png"
+
+  utter_efectivo:
+  - text: "¡OK! Le avisamos al cobrador que pase a retirar el pago."
+  - text: "Dale, coordino entonces con el cobrador para que te visite."
+
+  utter_mercadopago:
+    - text: "Para abonar por Mercado Pago, te envío el código QR:"
+      image: "https://www.imagineone.com.ar/botAssets/qrmp.png"
+    - text: "Te envío el código QR de nuestra cuenta de Mercado Pago:"
+      image: "https://www.imagineone.com.ar/botAssets/qrmp.png"
+    - text: "¡Buenisimo! Te paso el QR, scanealo y enviá el monto que necesites:"
+      image: "https://www.imagineone.com.ar/botAssets/qrmp.png"
 
   utter_start:
-  - text: "¡Hola! Bienvenido a Imagine One. ¿En qué puedo ayudarte?"
+  - text: "¡Hola! Te damos la bienvenida a Imagine One. ¿En qué puedo ayudarte?"
+  - text: "Gracias por comunicarte con Imagine One. ¿Cómo te puedo ayudar?"
+  - text: "¡Bienvenido! Somos Imagine One. ¿Cómo podemos ayudarte hoy?"
+
+  utter_fallback:
+  - text: "No entendí tu consulta. ¿Podrías reformularla?"
+  - text: "Perdón, pero no te entendí. ¿Me brindarías más información?"
+  - text: "Disculpame, no entendí lo que quisiste decir. ¿Podrías explicarme mejor?"
+
+actions:
+  - action_default_fallback
+
+
 
 session_config:
   session_expiration_time: 60

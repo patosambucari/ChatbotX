@@ -17,6 +17,8 @@ pipeline:
 - name: DIETClassifier
   epochs: 100
   constrain_similarities: true
+  intent_classification: { confidence_threshold: 0.7 }
+  entity_recognition: { confidence_threshold: 0.7 }
 
 policies:
   - name: MemoizationPolicy

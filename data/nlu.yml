@@ -35,12 +35,40 @@ nlu:
     - como podemos pagar
     - como puedo pagar
     - medios de pago
+    - por donde pago
+    - transferir
+    - pagar
+
+- intent: bancos
+  examples: |
     - cuentas bancarias
     - cbu
     - alias
-    - datos de mercado pago
     - datos de cuenta
+    - santander
+    - galicia
+    - banco
+    - bancos
+    - por banco
+    - bancario
+    - deposito
+
+- intent: mercadopago
+  examples: |    
+    - datos de mercado pago
+    - mercado pago
+    - qr
+    - mp
+
+- intent: efectivo
+  examples: |    
     - efectivo
+    - enviar dinero
+    - retirar dinero
+    - cash
+    - plata
+    - sobre con plata
+    - sobre con dinero
 
 - intent: affirm
   examples: |
