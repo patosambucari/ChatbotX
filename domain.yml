@@ -14,6 +14,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - agradecimiento
 
 responses:
   utter_greet:
@@ -76,6 +77,10 @@ responses:
   - text: "No entendí tu consulta. ¿Podrías reformularla?"
   - text: "Perdón, pero no te entendí. ¿Me brindarías más información?"
   - text: "Disculpame, no entendí lo que quisiste decir. ¿Podrías explicarme mejor?"
+
+  utter_agradecimiento:
+  - text: "¡Gracias a vos!"
+  - text: "¡Muchas gracias a vos!"
 
 actions:
   - action_default_fallback

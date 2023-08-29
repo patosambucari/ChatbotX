@@ -47,7 +47,12 @@ rules:
   - intent: efectivo
   - action: utter_efectivo
 
-#- rule: No se entiende la consulta
-#  steps:
-#  - intent: nlu_fallback
-#  - action: utter_fallback
+- rule: Agradecer
+  steps:
+  - intent: agradecimiento
+  - action: utter_agradecimiento
+
+- rule: No se entiende la consulta
+  steps:
+  - intent: nlu_fallback
+  - action: utter_fallback
