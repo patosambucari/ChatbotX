@@ -51,9 +51,9 @@ responses:
   utter_bancos:
   - text: "Te envío a continuación nuestros datos bancarios:"
     image: "https://www.imagineone.com.ar/botAssets/bancos.png"
-  - text: "¡Perfecto! Te paso los datos de nuestras cuentas:"
+  - text: "Te paso los datos de nuestras cuentas:"
     image: "https://www.imagineone.com.ar/botAssets/bancos.png"
-  - text: "Bárbaro, estos son los datos de nuestras cuentas bancarias:"
+  - text: "Estos son los datos de nuestras cuentas bancarias:"
     image: "https://www.imagineone.com.ar/botAssets/bancos.png"
 
   utter_efectivo:
@@ -65,7 +65,7 @@ responses:
       image: "https://www.imagineone.com.ar/botAssets/qrmp.png"
     - text: "Te envío el código QR de nuestra cuenta de Mercado Pago:"
       image: "https://www.imagineone.com.ar/botAssets/qrmp.png"
-    - text: "¡Buenisimo! Te paso el QR, scanealo y enviá el monto que necesites:"
+    - text: "Te paso el QR, scanealo y enviá el monto que necesites:"
       image: "https://www.imagineone.com.ar/botAssets/qrmp.png"
 
   utter_start:
