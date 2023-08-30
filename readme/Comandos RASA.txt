@@ -1,12 +1,20 @@
-rasa train
+rasa train -vv --endpoints endpoints.yml 
 
 rasa run actions
 rasa run actions --actions actions -vv
 
-rasa run -m models --enable-api --cors "*" 
+rasa run -m models --enable-api -vv --endpoints endpoints actions --cors "*" 
 
 
 
 PERMISSION ERRORS
 to delete the Rasa cache: “.rasa/cache”
 to delete the content of the directory “C:\Users\xxxxxx\AppData\Local\Temp\tmpxxxxx”
+
+
+SATISFACCIÓN
+PRODUCTIVIDAD
+FIDELIZACIÓN
+DISPONIBILIDAD
+CALIDAD
+MARKETINGa
