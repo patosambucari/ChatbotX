@@ -60,9 +60,9 @@ stories:
     - intent: solicitar_precio
     - action: utter_solicitar_precio
     - action: utter_pedir_datos
-    - intent: informar_datos_cliente
-    - action: utter_cliente_registrado
-    - action: utter_consultar_producto
+    - intent: datos_cliente
+    - action: utter_datos_cliente
+    - action: utter_producto_para_precio
 
 - story: Pedir Precio (Cliente NO registrado abre cuenta)
   steps:

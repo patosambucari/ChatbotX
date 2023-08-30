@@ -15,7 +15,7 @@ intents:
   - bot_challenge
   - agradecimiento
   - solicitar_precio
-  - informar_datos_cliente
+  - datos_cliente
   - cliente_nuevo
   - consulta_producto
 
@@ -113,10 +113,10 @@ responses:
   - text: "Necesitaria que me informes tu número de cliente y el mail que registraste."
   - text: "Por favor indicame tu número de cliente y tu correo de contacto."
 
-  utter_cliente_registrado:
+  utter_datos_cliente:
   - text: "¡Bienvenido OPTICA LOPEZ!"
 
-  utter_consultar_producto:
+  utter_producto_para_precio:
   - text: "¿Qué presupuesto necesitas?"
   - text: "¿Qué precio necesitabas saber?"
   - text: "¿De qué producto necesitás saber el precio?"

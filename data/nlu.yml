@@ -143,13 +143,17 @@ nlu:
     - que precio estan
     - cual es el valor
 
-- intent: informar_datos_cliente
+- intent: datos_cliente
   examples: |
     - mi numero de cliente mi mail
     - numero de cliente mail
     - numero cliente correo electronico
     - numero cuenta correo
     - numero cuenta mail
+    - cliente correo
+    - cliente mail
+    - cuenta correo
+    - cuenta mail
 
 - intent: cliente_nuevo
   examples: |
