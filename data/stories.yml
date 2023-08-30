@@ -34,54 +34,46 @@ stories:
 #  - intent: unclear_input
 #  - action: action_default_fallback
 
-- story: Brindar precio con cliente validado
-  steps:
-  - intent: solicitar_precio
-  - action: ActionBrindarPrecio
-
-- story: Consultar pago
+- story: Medios de Pago por Banco
   steps:
   - intent: payment_methods
   - action: utter_payment_methods
   - intent: bancos
   - action: utter_bancos
+
+- story: Medios de Pago MP
+  steps:
+  - intent: payment_methods
+  - action: utter_payment_methods
   - intent: mercadopago
   - action: utter_mercadopago
+
+- story: Medios de Pago Efectivo
+  steps:
+  - intent: payment_methods
+  - action: utter_payment_methods
   - intent: efectivo
   - action: utter_efectivo
 
-- story: Solicitar y validar número de cuenta
+- story: Pedir Precio (Cliente registrado)
   steps:
-  - intent: informar_numero_cuenta
-    user: |-
-      Mi número de cuenta es 54123
-  - action: ActionValidarNroCta
-  - slot_was_set:
-    - nro_cta_cliente: "54123"
+    - intent: solicitar_precio
+    - action: utter_solicitar_precio
+    - action: utter_pedir_datos
+    - intent: informar_datos_cliente
+    - action: utter_cliente_registrado
+    - action: utter_consultar_producto
 
-  - intent: informar_numero_cuenta
-    user: |-
-      Mi número de cuenta es 12345
-  - action: ActionValidarNroCta
-  - action: ActionSolicitarNroCta
+- story: Pedir Precio (Cliente NO registrado abre cuenta)
+  steps:
+    - intent: solicitar_precio
+    - action: utter_solicitar_precio
+    - action: utter_pedir_datos
+    - intent: cliente_nuevo
+    - action: utter_abrir_cuenta
+    - action: utter_agradecimiento
 
-  - intent: informar_numero_cuenta
-    user: |-
-      Mi número de cuenta es 55555
-  - action: ActionValidarNroCta
-  - slot_was_set:
-    - nro_cta_cliente: "55555"
-
-  - intent: informar_numero_cuenta
-    user: |-
-      Mi número de cuenta es 123
-  - action: ActionValidarNroCta
-  - action: ActionSolicitarNroCta
-
-  - intent: informar_numero_cuenta
-    user: |-
-      Mi número de cuenta es 123456
-  - action: ActionValidarNroCta
-  - action: ActionSolicitarNroCta
-
-
+- story: Consultar Producto
+  steps:
+    - intent: consulta_producto
+    - action: utter_confirmar_producto

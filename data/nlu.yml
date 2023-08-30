@@ -87,8 +87,10 @@ nlu:
   examples: |
     - no
     - nono
-    - suspendelo
-    - cancelalo
+    - no no
+    - no quiero abrir una cuenta
+    - no, no quiero
+    - no, paso
 
 - intent: mood_great
   examples: |
@@ -106,6 +108,9 @@ nlu:
     - Todo mal
     - Horrible
     - Para atras
+    - preocupado
+    - bastante mal
+    - mal
 
 - intent: bot_challenge
   examples: |
@@ -124,16 +129,45 @@ nlu:
 
 - intent: solicitar_precio
   examples: |
+    - decirme precio
+    - pasarme presupuesto
     - precio
     - presupuesto
+    - indicarme precio
+    - cuanto sale
+    - que vale
+    - que cuestan
+    - que valen
+    - cuanto salen
+    - que precio tiene
+    - que precio estan
+    - cual es el valor
 
-- intent: informar_numero_cuenta
+- intent: informar_datos_cliente
   examples: |
-    - te paso mi numero de cliente
-    - soy el cliente numero
-    - mi numero de cliente es
-    - numero de cliente
-    - cliente numero
+    - mi numero de cliente mi mail
+    - numero de cliente mail
+    - numero cliente correo electronico
+    - numero cuenta correo
+    - numero cuenta mail
+
+- intent: cliente_nuevo
+  examples: |
+    - no soy cliente
+    - no tengo cuenta
+    - soy cliente nuevo
+    - no estoy registrado
+
+- intent: consulta_producto
+  examples: |
+    - venden Biomedics
+    - venden Air Optix
+    - venden Biofinity
+    - venden Avaira
+    - trabajan Biomedics
+    - trabajan Air Optix
+    - trabajan Biofinity
+    - trabajan Avaira
 
 regex:
   nro_cta_cliente: '5\d{4}'

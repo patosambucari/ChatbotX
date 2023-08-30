@@ -15,7 +15,9 @@ intents:
   - bot_challenge
   - agradecimiento
   - solicitar_precio
-  - informar_numero_cuenta
+  - informar_datos_cliente
+  - cliente_nuevo
+  - consulta_producto
 
 entities:
   - marca_lente
@@ -28,61 +30,30 @@ regex:
   - nro_cta_cliente
   - mail_cliente
 
-actions:
-  - ActionValidarNroCta
-  - ActionSolicitarNroCta
-  - ActionBrindarPrecio
-#  - ActionDefaultFallback
-
-slots:
-  marca_lente:
-    type: text
-    initial_value: null
-    mappings:
-      - type: custom
-  nombre_cliente:
-    type: text
-    initial_value: null
-    mappings:
-      - type: custom
-  nro_cta_cliente:
-      type: text
-      initial_value: null
-      mappings:
-        - type: custom
-  mail_cliente:
-      type: text
-      initial_value: null
-      mappings:
-        - type: custom
-  cuit_cliente:
-      type: text
-      initial_value: null
-      mappings:
-        - type: custom
-  cliente_validado:
-      type: bool
-      initial_value: false
-      mappings:
-        - type: custom
-
 responses:
   utter_greet:
   - text: "¡Hola! ¿Como estas?"
   - text: "¿Qué tal estás?"
   - text: "¿Cómo estás hoy?"
+  - text: "¿Cómo andás?"
+  - text: "¿Cómo te va?"
 
   utter_cheer_up:
   - text: "¡Que te mejores!"
   - text: "¡Ya va a mejorar todo!"
+  - text: "¡Arriba el ánimo!"
+  - text: "Vamos que ya llega el fin de semana."
 
   utter_did_that_help:
-  - text: "¿Te sirvió mi ayuda?"
+  - text: "¿Qué puedo hacer por vos?"
+  - text: "¿Cómo te puedo ayudar?"
+  - text: "¿Hay algo en lo que pueda darte una mano?"
 
   utter_happy:
   - text: "¡Me alegro!"
   - text: "¡Que bueno! Por aquí todo bien, también."
   - text: "Mejor así."
+  - text: "¡Cuánto me alegro!"
 
   utter_goodbye:
   - text: "Hasta la próxima. ¡Muchas gracias!"
@@ -131,6 +102,34 @@ responses:
   utter_agradecimiento:
   - text: "¡Gracias a vos!"
   - text: "¡Muchas gracias a vos!"
+
+  utter_solicitar_precio:
+  - text: "Para poder brindarte esa información, necesito identificarte."
+  - text: "Debes estar logueado para que pueda darte esa información."
+  - text: "No puedo brindarte esa información sin identificarte."
+
+  utter_pedir_datos:
+  - text: "Te pido me brindes tu número de cliente y tu correo electrónico registrado."
+  - text: "Necesitaria que me informes tu número de cliente y el mail que registraste."
+  - text: "Por favor indicame tu número de cliente y tu correo de contacto."
+
+  utter_cliente_registrado:
+  - text: "¡Bienvenido OPTICA LOPEZ!"
+
+  utter_consultar_producto:
+  - text: "¿Qué presupuesto necesitas?"
+  - text: "¿Qué precio necesitabas saber?"
+  - text: "¿De qué producto necesitás saber el precio?"
+
+  utter_abrir_cuenta:
+  - text: "De acuerdo, en caso de que quieras abrir una cuenta, te envío este formulario para completar, y nos pondremos en contacto a la brevedad --> https://forms.gle/diVpT7jArwZisct8A"
+  - text: "¡Muy bien! Si queres abrir una cuenta con nosotros, te envio el formulario de apertura de cuenta --> https://forms.gle/diVpT7jArwZisct8A"
+  - text: "OK, te dejo un formulario para que puedas abrir una cuenta, si así lo deseas --> https://forms.gle/diVpT7jArwZisct8A"
+
+  utter_confirmar_producto:
+  - text: "¡Si, claro! Comercializamos ese producto."
+  - text: "Por supuesto, trabajamos esa línea."
+  - text: "Si, tenemos de esas lentes en stock."
 
 session_config:
   session_expiration_time: 60

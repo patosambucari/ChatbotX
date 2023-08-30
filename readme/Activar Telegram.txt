@@ -1,0 +1,9 @@
+AUTORIZAR TOKEN
+./ngrok config add-authtoken 2UfeCZNrnOWmjUJSfAyZnnkn8yB_4J6njTcFE9msuQZMN2uso
+
+INICIAR SERVICIO
+./ngrok http 5005
+
+Ingresar NGROK / DASHBOARD / TUNNELS / AGENTS y buscar la URL.
+Pegarla en el webhook de Telegram dentro de credentials.yml
+
