@@ -28,3 +28,7 @@ policies:
     max_history: 5
     epochs: 100
 
+endpoints:
+  action_endpoint:
+    url: "http://localhost:5055/webhook"
+

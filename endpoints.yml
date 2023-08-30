@@ -1,5 +1,7 @@
-action_endpoint:
-  url: "http://localhost:5055/webhook"
+endpoints:
+  action_endpoint:
+    url: "http://localhost:5055/webhook"
+
 
 # This file contains the different endpoints your bot can use.
 
