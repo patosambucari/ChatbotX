@@ -2,6 +2,14 @@ endpoints:
   action_endpoint:
     url: "http://localhost:5055/webhook"
 
+tracker_store:
+    type: mongod
+    url: mongodb+srv://patosambucari:TXjiw1ObqLqGqjdR@cluster0.joxh3qw.mongodb.net/
+    db: imagineone
+    username: user
+    password: BaNeGaS3
+#    auth_source: <database name associated with the user's credentials>
+    collection: chatbotx
 
 # This file contains the different endpoints your bot can use.
 
