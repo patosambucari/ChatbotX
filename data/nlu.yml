@@ -34,6 +34,7 @@ nlu:
 - intent: payment_methods
   examples: |
     - formas de pago
+    - hacer un pago
     - metodos de pago
     - como podemos pagar
     - como puedo pagar
@@ -123,9 +124,12 @@ nlu:
 - intent: agradecimiento
   examples: |
     - gracias
+    - gracias!
+    - muchas gracias!
     - muchas gracias
     - te agradezco
     - agradecido
+    - muy agradecido
 
 - intent: solicitar_precio
   examples: |
@@ -142,6 +146,7 @@ nlu:
     - que precio tiene
     - que precio estan
     - cual es el valor
+    - cuanto estan
 
 - intent: datos_cliente
   examples: |
@@ -173,9 +178,45 @@ nlu:
     - trabajan Biofinity
     - trabajan Avaira
 
-regex:
-  nro_cta_cliente: '5\d{4}'
-  mail_cliente: '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+- intent: horario
+  examples: |
+    - horario
+    - abren los sabados
+    - estan abiertos
+    - hasta que hora estan
+    - hasta que hora trabajan
+    - estan trabajando
+    - en que horario estan
+    - que horario hacen
+    
 
+- intent: direccion
+  examples: |
+    - su direccion
+    - donde estan
+    - donde retiro
+    - pasar a retirar
+    - ubicacion
+    - en que calles
+    - donde se ubican
+    - donde retirar
+
+- intent: envios
+  examples: |
+    - hacen envios
+    - hacen despachos
+    - pueden despachar
+    - como despachan
+    - como envian
+    - por donde envian
+    - por donde despachan
+    - soy de (ubicacion)
+    - estoy en (ubicacion)
+    - envian a (ubicacion)
+    - despachan a (ubicacion)
+
+#regex:
+#  mail_cliente: '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+#  nro_cta_cliente: '5\d{4}'
 
 constrain_similarities: true

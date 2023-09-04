@@ -18,6 +18,9 @@ intents:
   - datos_cliente
   - cliente_nuevo
   - consulta_producto
+  - horario
+  - direccion
+  - envios
 
 entities:
   - marca_lente
@@ -25,6 +28,7 @@ entities:
   - nro_cta_cliente
   - mail_cliente
   - cuit_cliente
+  - ubicacion
 
 regex:
   - nro_cta_cliente
@@ -130,6 +134,31 @@ responses:
   - text: "¡Si, claro! Comercializamos ese producto."
   - text: "Por supuesto, trabajamos esa línea."
   - text: "Si, tenemos de esas lentes en stock."
+
+  utter_please_rephrase:
+  - text: "Te pido disculpas, no te entendí. ¿Podrías reformular lo que dijiste?"
+  - text: "No pude comprender tu último mensaje. ¿Podrías explicarte mejor?"
+  - text: "¡No te entendí! ¿Podrías darme más detalles?"
+
+  utter_default:
+    - text: "Te pido disculpas, no te entendí. ¿Podrías reformular lo que dijiste?"
+    - text: "No pude comprender tu último mensaje. ¿Podrías explicarte mejor?"
+    - text: "¡No te entendí! ¿Podrías darme más detalles?"
+
+  utter_horario:
+    - text: "Trabajamos de lunes a viernes de 9:00 a 18:00 hs."
+    - text: "Estamos de lunes a viernes de 9:00 a 18:00 hs."
+    - text: "Podes encontrarnos de lunes a viernes de 9:00 a 18:00 hs."
+
+  utter_direccion:
+    - text: "Nuestra dirección es José María Paz 1242, Ituzaingó. Ubicación --> https://goo.gl/maps/dBjq7joCeG4WijHr9"
+    - text: "Estamos en José María Paz 1242, Ituzaingó. Ubicación --> https://goo.gl/maps/dBjq7joCeG4WijHr9"
+    - text: "Podés encontrarnos en José María Paz 1242, Ituzaingó. Ubicación --> https://goo.gl/maps/dBjq7joCeG4WijHr9"
+
+  utter_envios:
+    - text: "¡Hacemos envíos a todo el país! Podemos coordinarlo sin problemas."
+    - text: "Despchamos a todo el país por el medio que resulte mas conveniente."
+    - text: "Hacemos entregas en todo el país."
 
 session_config:
   session_expiration_time: 60

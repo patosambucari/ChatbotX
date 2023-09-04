@@ -52,7 +52,22 @@ rules:
   - intent: agradecimiento
   - action: utter_agradecimiento
 
-- rule: No se entiende la consulta
+- rule: Reformular ante fallback
   steps:
   - intent: nlu_fallback
-  - action: utter_fallback
+  - action: utter_please_rephrase
+
+- rule: horario
+  steps:
+  - intent: horario
+  - action: utter_horario
+
+- rule: direccion
+  steps:
+    - intent: direccion
+    - action: utter_direccion
+
+- rule: envios
+  steps:
+    - intent: envios
+    - action: utter_envios

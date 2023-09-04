@@ -29,11 +29,6 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-#- story: No se entiende la consulta
-#  steps:
-#  - intent: unclear_input
-#  - action: action_default_fallback
-
 - story: Medios de Pago por Banco
   steps:
   - intent: payment_methods
